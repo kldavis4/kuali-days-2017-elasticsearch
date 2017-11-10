@@ -14,19 +14,21 @@ Start by modifying the configuration in `config` to point to your Elasticsearch 
 
 ### Create Index / Mapping
 
-```curl -XPUT http://localhost:9200/wikipedia_sample -d @createindex.json 
-curl -XPUT http://localhost:9200/wikipedia_sample/_mapping/article -d @updatemapping.json```
+```
+curl -XPUT http://localhost:9200/wikipedia_sample -d @createindex.json 
+curl -XPUT http://localhost:9200/wikipedia_sample/_mapping/article -d @updatemapping.json
+```
 
 ### Install dependencies
 
-```yarn```
+`yarn`
 
 ## Start Indexing
 
-```node index.js```
+`node index.js`
 
 ## Index all of english wikipedia
 
 Download https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2
 
-```CONTENT_FILE=./enwiki-latest-pages-articles.xml.bz2 node index.js```
+`CONTENT_FILE=./enwiki-latest-pages-articles.xml.bz2 node index.js`
