@@ -6,16 +6,17 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
 
 ## Create index
 
-```curl -XPUT http://127.0.0.1:9200/weather-data-deaths -d @createindex.json```
+`curl -XPUT http://127.0.0.1:9200/weather-data-deaths -d @createindex.json`
 
 ## Index weather data
 
-```curl -H "Content-Type: application/ndjson" -XPOST http://127.0.0.1:9200/_bulk --data-binary @bulkindex.json```
+`curl -H "Content-Type: application/ndjson" -XPOST http://127.0.0.1:9200/_bulk --data-binary @bulkindex.json`
 
 # Aggregations
 
 ## Weather related deaths by month
-```POST /weather-data-deaths/_search?size=0
+```
+POST /weather-data-deaths/_search?size=0
 {
   "aggs": {
     "temp": {
@@ -34,11 +35,13 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
     }
   }
 }
+```
 
 # Pipeline Aggregations
 
 ## Total weather related deaths in NY state (Sibling)
-```POST /weather-data-deaths/_search?size=0
+```
+POST /weather-data-deaths/_search?size=0
 {
   "query": {
     "match": {
@@ -66,12 +69,13 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
       }
     }
   }
-}```
-
+}
+```
 
 ## Cumulative Sum of Monthly Weather Related Deaths for NY state (Parent)
 
-```POST /weather-data-deaths/_search?size=0
+```
+POST /weather-data-deaths/_search?size=0
 {
   "query": {
     "match": {
@@ -99,11 +103,13 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
       }
     }
   }
-}```
+}
+```
 
 ## First Derivative of Monthly Weather Related Deaths for NY state (Parent)
 
-```POST /weather-data-deaths/_search?size=0
+```
+POST /weather-data-deaths/_search?size=0
 {
   "query": {
     "match": {
@@ -131,4 +137,5 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
       }
     }
   }
-}```
+}
+```
