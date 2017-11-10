@@ -6,16 +6,17 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
 
 ## Create index
 
-```curl -XPUT http://127.0.0.1:9200/weather-data -d @createindex.json```
+`curl -XPUT http://127.0.0.1:9200/weather-data -d @createindex.json`
 
 ## Index weather data
 
-```curl -H "Content-Type: application/ndjson" -XPOST http://127.0.0.1:9200/_bulk --data-binary @bulkindex.json```
+`curl -H "Content-Type: application/ndjson" -XPOST http://127.0.0.1:9200/_bulk --data-binary @bulkindex.json`
 
 # Aggregations
 
 ## Date histogram
-```POST /weather-data/_search?size=0
+```
+POST /weather-data/_search?size=0
 {
     "aggregations" : {
         "temps_per_month" : {
@@ -25,12 +26,13 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
             }
         }
     }
-}```
-
+}
+```
 
 ## Date histogram with average temp
 
-```POST /weather-data/_search?size=0
+```
+POST /weather-data/_search?size=0
 {
     "aggregations" : {
         "temps_per_month" : {
@@ -47,14 +49,15 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
             }
         }
     }
-}```
-
+}
+```
 
 # Pipeline Aggregations
 
 ## Average of monthly averages
 
-```POST /weather-data/_search?size=0
+```
+POST /weather-data/_search?size=0
 {
   "aggs": {
     "temps_per_month": {
@@ -77,11 +80,13 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
       }
     }
   }
-}```
+}
+```
 
 ## Max of monthly averages
 
-```POST /weather-data/_search?size=0
+```
+POST /weather-data/_search?size=0
 {
   "aggs": {
     "temps_per_month": {
@@ -104,10 +109,12 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
       }
     }
   }
-}```
+}
+```
 
 ## Min of monthly averages
-```POST /weather-data/_search?size=0
+```
+POST /weather-data/_search?size=0
 {
   "aggs": {
     "temps_per_month": {
@@ -130,4 +137,6 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
       }
     }
   }
-}```
+}
+```
+
