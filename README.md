@@ -8,7 +8,8 @@ Source code associated with the Elasticsearch presentation at Austin Kuali Days 
 
 ## Setup
 
-```git clone git@github.com:kldavis4/kuali-days-2017-elasticsearch.git
+```
+git clone git@github.com:kldavis4/kuali-days-2017-elasticsearch.git
 cd kuali-days-2017-elasticsearch/docker
 docker-compose up
 curl http://127.0.0.1:9200/_cluster/health?pretty=true
