@@ -1,0 +1,34 @@
+{
+    "properties": {
+        "title": {
+            "type": "text",
+            "fields": {
+              "keyword": {
+                "type": "keyword",
+                "ignore_above": 256
+              }
+            }
+        },
+        "text": {
+            "type": "text"
+        },
+        "id": {
+            "type": "integer"
+        },
+        "timestamp": {
+            "type": "date"
+        },
+        "model": {
+            "type": "keyword"
+        },
+        "format": {
+            "type": "keyword"
+        },
+        "parentid": {
+            "type": "integer"
+        }
+    },
+    "_all": {
+        "enabled": false
+    }
+}

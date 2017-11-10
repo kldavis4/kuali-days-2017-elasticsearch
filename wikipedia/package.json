@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "axios": "^0.17.0",
+    "config": "^1.28.1",
+    "sax": "^1.2.4",
+    "unbzip2-stream": "^1.2.5"
+  }
+}
