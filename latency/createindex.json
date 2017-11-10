@@ -1,0 +1,17 @@
+{
+  "mappings": {
+    "data": {
+      "properties": {
+        "load_time":{
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "settings" : {
+      "index" : {
+          "number_of_shards" : 5,
+          "number_of_replicas" : 0
+      }
+  }
+}

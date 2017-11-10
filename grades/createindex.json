@@ -1,0 +1,25 @@
+{
+  "mappings": {
+    "finals": {
+      "properties": {
+        "student":{
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "date": {
+          "type":   "date",
+          "format": "dd-MM-yyyy"
+        },
+        "grade":{
+          "type": "integer"
+        }
+      }
+    }
+  },
+  "settings" : {
+      "index" : {
+          "number_of_shards" : 5,
+          "number_of_replicas" : 0
+      }
+  }
+}

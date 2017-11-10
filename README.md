@@ -17,6 +17,8 @@ curl http://127.0.0.1:9200/_cluster/health?pretty=true
 ## Folders
 
 - wikipedia: Sample application for indexing wikipedia
+- grades: Sample data for demonstrating single value Metrics aggregation
+- latency: Sample data for demonstrating multi value Metrics aggregation
 - weather-data: Sample data for demonstrating Sibling Pipeline Aggregations
 - weather-data-deaths: Sample data for demonstrating Parent Pipeline Aggregations
 
