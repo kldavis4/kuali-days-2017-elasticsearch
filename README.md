@@ -24,5 +24,5 @@ curl http://127.0.0.1:9200/_cluster/health?pretty=true
 
 Go to http://127.0.0.1:9000 and connect to http://elasticsearch1:9200
 
-![Cerebro Login](https://github.com/kldavis4/kuali-days-2017-elasticsearch/raw/master/cerebro.png "Cerebro Login")
+![Cerebro Login](https://github.com/kldavis4/kuali-days-2017-elasticsearch/raw/master/cerebro_login.png "Cerebro Login")
 
