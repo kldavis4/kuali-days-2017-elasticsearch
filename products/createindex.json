@@ -1,0 +1,21 @@
+{
+  "mappings": {
+    "woks": {
+      "properties": {
+        "brand":{
+          "type": "string",
+          "index": "not_analyzed"
+        },
+        "price":{
+          "type": "float"
+        }
+      }
+    }
+  },
+  "settings" : {
+      "index" : {
+          "number_of_shards" : 5,
+          "number_of_replicas" : 0
+      }
+  }
+}
