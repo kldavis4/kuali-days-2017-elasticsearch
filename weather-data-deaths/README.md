@@ -16,8 +16,9 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
 
 ## Weather related deaths by month
 ```
-POST /weather-data-deaths/_search?size=0
+POST /weather-data-deaths/_search
 {
+  "size": 0,
   "aggs": {
     "temp": {
       "date_histogram": {
@@ -41,8 +42,9 @@ POST /weather-data-deaths/_search?size=0
 
 ## Total weather related deaths in NY state (Sibling)
 ```
-POST /weather-data-deaths/_search?size=0
+POST /weather-data-deaths/_search
 {
+  "size": 0,
   "query": {
     "match": {
       "state": "NY"
@@ -75,8 +77,9 @@ POST /weather-data-deaths/_search?size=0
 ## Cumulative Sum of Monthly Weather Related Deaths for NY state (Parent)
 
 ```
-POST /weather-data-deaths/_search?size=0
+POST /weather-data-deaths/_search
 {
+  "size": 0,
   "query": {
     "match": {
       "state": "NY"
@@ -109,8 +112,9 @@ POST /weather-data-deaths/_search?size=0
 ## First Derivative of Monthly Weather Related Deaths for NY state (Parent)
 
 ```
-POST /weather-data-deaths/_search?size=0
+POST /weather-data-deaths/_search
 {
+  "size": 0,
   "query": {
     "match": {
       "state": "NY"

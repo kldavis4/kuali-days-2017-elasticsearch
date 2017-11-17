@@ -14,8 +14,9 @@
 
 ## Price range counts
 ```
-POST /products/woks/_search?size=0
+POST /products/woks/_search
 {
+  "size" : 0,
   "aggs" : {
     "price_ranges" : { 
       "range" : {
@@ -33,8 +34,9 @@ POST /products/woks/_search?size=0
 
 ## Price range average in range
 ```
-POST /products/woks/_search?size=0
+POST /products/woks/_search
 {
+  "size" : 0,
   "aggs" : {
     "price_ranges" : {
       "range" : {
@@ -61,8 +63,9 @@ POST /products/woks/_search?size=0
 
 ## Brands Facet
 ```
-POST /products/woks/_search?size=0
+POST /products/woks/_search
 {
+    "size" : 0,
     "aggs" : {
         "brands" : {
             "terms" : { "field" : "brand" }

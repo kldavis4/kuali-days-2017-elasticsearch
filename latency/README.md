@@ -14,8 +14,9 @@
 
 ## Load Time Percentils
 ```
-POST /latency/data/_search?size=0
+POST /latency/data/_search
 {
+  "size" : 0,
   "aggs" : {
     "load_time_outlier" : { 
       "percentiles" : { 

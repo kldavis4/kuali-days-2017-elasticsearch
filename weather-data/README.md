@@ -16,8 +16,9 @@ Adapted from https://qbox.io/blog/introduction-pipeline-aggregations
 
 ## Date histogram
 ```
-POST /weather-data/_search?size=0
+POST /weather-data/_search
 {
+    "size": 0,
     "aggregations" : {
         "temps_per_month" : {
             "date_histogram" : {
@@ -32,8 +33,9 @@ POST /weather-data/_search?size=0
 ## Date histogram with average temp
 
 ```
-POST /weather-data/_search?size=0
+POST /weather-data/_search
 {
+    "size": 0,
     "aggregations" : {
         "temps_per_month" : {
             "date_histogram" : {
@@ -57,8 +59,9 @@ POST /weather-data/_search?size=0
 ## Average of monthly averages
 
 ```
-POST /weather-data/_search?size=0
+POST /weather-data/_search
 {
+  "size": 0,
   "aggs": {
     "temps_per_month": {
       "date_histogram": {
@@ -86,8 +89,9 @@ POST /weather-data/_search?size=0
 ## Max of monthly averages
 
 ```
-POST /weather-data/_search?size=0
+POST /weather-data/_search
 {
+  "size": 0,
   "aggs": {
     "temps_per_month": {
       "date_histogram": {
@@ -114,8 +118,9 @@ POST /weather-data/_search?size=0
 
 ## Min of monthly averages
 ```
-POST /weather-data/_search?size=0
+POST /weather-data/_search
 {
+  "size": 0,
   "aggs": {
     "temps_per_month": {
       "date_histogram": {

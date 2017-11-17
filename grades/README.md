@@ -14,8 +14,9 @@
 
 ## Average Grade
 ```
-POST /exams/_search?size=0
+POST /exams/_search
 {
+  "size" : 0,
   "aggs" : {
     "avg_grade" : { 
       "avg" : { 
