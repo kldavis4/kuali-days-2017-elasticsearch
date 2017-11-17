@@ -10,7 +10,13 @@
             }
         },
         "text": {
-            "type": "text"
+            "type": "text",
+            "fields": {
+                "english": {
+                    "type":     "text",
+                    "analyzer": "english"
+                }
+            }
         },
         "id": {
             "type": "integer"
